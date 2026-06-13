@@ -232,8 +232,9 @@ export function Projects() {
       </div>
 
       <div className="project-grid">
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           const { baseImage, hoverImage } = cardImages(project);
+          const isFirstRow = index < 3;
 
           return (
             <a
@@ -243,9 +244,30 @@ export function Projects() {
               style={cssVars(project)}
             >
               <figure className="project-media">
-                <img className="project-card-image" src={baseImage} alt="" {...deferredImageProps} />
-                <img className="project-card-hover-image" src={hoverImage} alt="" {...deferredImageProps} />
-                <img className="project-logo" src={project.logo} alt={`${project.name} logo`} {...deferredImageProps} />
+                <img
+                  className="project-card-image"
+                  src={baseImage}
+                  alt=""
+                  decoding="async"
+                  loading={isFirstRow ? "eager" : "lazy"}
+                  fetchPriority={isFirstRow ? "high" : "auto"}
+                />
+                <img
+                  className="project-card-hover-image"
+                  src={hoverImage}
+                  alt=""
+                  decoding="async"
+                  loading="lazy"
+                  fetchPriority="low"
+                />
+                <img
+                  className="project-logo"
+                  src={project.logo}
+                  alt={`${project.name} logo`}
+                  decoding="async"
+                  loading={isFirstRow ? "eager" : "lazy"}
+                  fetchPriority="low"
+                />
                 <span className="project-hover-label">Zobrazit projekt</span>
               </figure>
               <div className="project-meta">

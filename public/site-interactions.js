@@ -1,5 +1,6 @@
 (() => {
   const coarse = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
+  const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const cursor = document.querySelector(".cursor");
   if (!cursor || coarse) return;
 
@@ -9,10 +10,19 @@
   let targetX = currentX;
   let targetY = currentY;
 
+  const paint = () => {
+    cursor.style.transform = "translate3d(" + currentX + "px," + currentY + "px,0) translate(-50%,-50%)";
+  };
+
   const render = () => {
+    if (document.hidden) {
+      frame = 0;
+      return;
+    }
+
     currentX += (targetX - currentX) * 0.32;
     currentY += (targetY - currentY) * 0.32;
-    cursor.style.transform = "translate3d(" + currentX + "px," + currentY + "px,0) translate(-50%,-50%)";
+    paint();
 
     if (Math.abs(targetX - currentX) > 0.1 || Math.abs(targetY - currentY) > 0.1) {
       frame = window.requestAnimationFrame(render);
@@ -31,6 +41,12 @@
     (event) => {
       targetX = event.clientX;
       targetY = event.clientY;
+      if (reducedMotion) {
+        currentX = targetX;
+        currentY = targetY;
+        paint();
+        return;
+      }
       schedule();
     },
     { passive: true }
@@ -40,13 +56,20 @@
     if (event.target && event.target.closest && event.target.closest("a, button, [data-cursor-label]")) {
       cursor.classList.add("is-active");
     }
-  });
+  }, { passive: true });
 
   document.addEventListener("pointerout", (event) => {
     const target = event.target && event.target.closest ? event.target.closest("a, button, [data-cursor-label]") : null;
     const next = event.relatedTarget;
     if (target && next && next.closest && next.closest("a, button, [data-cursor-label]") === target) return;
     cursor.classList.remove("is-active");
+  }, { passive: true });
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden && frame) {
+      window.cancelAnimationFrame(frame);
+      frame = 0;
+    }
   });
 
   window.addEventListener("keydown", (event) => {

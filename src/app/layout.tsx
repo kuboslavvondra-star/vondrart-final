@@ -17,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <head>
-        <link rel="stylesheet" href="/final-polish.css?v=20260613g" />
+        <link rel="preload" href="/fonts/NewBlack-800.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/NewBlack-400.otf" as="font" type="font/otf" crossOrigin="anonymous" />
+        <link rel="stylesheet" href="/final-polish.css?v=20260613h" />
       </head>
       <body>
         {children}

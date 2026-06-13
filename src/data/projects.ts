@@ -42,37 +42,37 @@ export const projects: Project[] = [
       "Social Media"
     ],
     logo: "/images/bonghemia-logo.png",
-    hero: "/images/bonghemia-lifestyle-visual.jpg",
-    cardImage: "/images/bonghemia-bongo.jpg",
+    hero: "/images/bonghemia-lifestyle-visual.webp",
+    cardImage: "/images/bonghemia-bongo.webp",
     palette: ["#131410", "#4e755f", "#fbb040", "#f2efe5"],
     gallery: [
       {
-        src: "/images/bonghemia-kratom-packaging.jpg",
+        src: "/images/bonghemia-kratom-packaging.webp",
         alt: "Bonghemia kratom packaging",
         caption: "Produktová grafika"
       },
       {
-        src: "/images/bonghemia-product-kit.jpg",
+        src: "/images/bonghemia-product-kit.webp",
         alt: "Bonghemia product kit",
         caption: "Product kit"
       },
       {
-        src: "/images/bonghemia-joint-us-merch.jpg",
+        src: "/images/bonghemia-joint-us-merch.webp",
         alt: "Bonghemia Joint Us merch",
         caption: "JOINT US merch"
       },
       {
-        src: "/images/bonghemia-grow-lifestyle.jpg",
+        src: "/images/bonghemia-grow-lifestyle.webp",
         alt: "Bonghemia grow lifestyle",
         caption: "Lifestyle fotografie"
       },
       {
-        src: "/images/bonghemia-cbd-oil-packaging.jpg",
+        src: "/images/bonghemia-cbd-oil-packaging.webp",
         alt: "Bonghemia CBD oil packaging",
         caption: "Packaging"
       },
       {
-        src: "/images/bonghemia-beztravi.jpg",
+        src: "/images/bonghemia-beztravi.webp",
         alt: "Bonghemia Bojujeme proti beztráví",
         caption: "Komunitní komunikace"
       }
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     services: ["Brand Identity", "Logo System", "Visual System", "Social Media", "Web Design"],
     logo: "/images/dopamine-tour-logo.png",
     hero: "/images/dopamine-radnice.webp",
-    cardImage: "/images/dopamine-tour-visual.jpg",
+    cardImage: "/images/dopamine-tour-visual.webp",
     palette: ["#fefaeb", "#73c9e6", "#5c5aa4", "#e84a94", "#0e101f"],
     gallery: [
       {
@@ -292,7 +292,7 @@ export const projects: Project[] = [
     ],
     services: ["Brand Identity", "Illustration", "Social Media"],
     logo: "/images/cafe-olbracht-logo.png",
-    hero: "/images/cafe-olbracht-main.jpg",
+    hero: "/images/cafe-olbracht-main.webp",
     cardImage: "/images/cafe-olbracht-cup.webp",
     palette: ["#fdf1d3", "#6a5652", "#cfdfbc", "#181818"],
     gallery: [
@@ -307,12 +307,12 @@ export const projects: Project[] = [
         caption: "Kelímek"
       },
       {
-        src: "/images/cafe-olbracht-interior.jpg",
+        src: "/images/cafe-olbracht-interior.webp",
         alt: "Café Olbracht interior",
         caption: "Provoz"
       },
       {
-        src: "/images/cafe-olbracht-service.jpg",
+        src: "/images/cafe-olbracht-service.webp",
         alt: "Café Olbracht service",
         caption: "Detail provozu"
       }

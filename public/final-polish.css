@@ -670,3 +670,58 @@
     height: min(118vw, 560px) !important;
   }
 }
+
+.project-card-image,
+.project-card-hover-image,
+.detail-hero-media img,
+.detail-feature-media img,
+.detail-gallery-grid img,
+.ill-card img {
+  backface-visibility: hidden !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover .project-card-image,
+  .project-card:hover .project-card-hover-image,
+  .detail-gallery-grid figure:hover img,
+  .ill-card:hover img {
+    will-change: transform, opacity !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .mesh-blob,
+  .scroll-cue span {
+    animation: none !important;
+    will-change: auto !important;
+  }
+
+  .marquee-track {
+    animation-duration: 48s !important;
+  }
+
+  .project-card-image,
+  .project-card-hover-image,
+  .detail-gallery-grid img,
+  .ill-card img {
+    transition-duration: 240ms !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mesh-blob,
+  .blink-comma,
+  .blink-sm,
+  .scroll-cue span,
+  .marquee-track {
+    animation: none !important;
+  }
+
+  .project-card-image,
+  .project-card-hover-image,
+  .detail-gallery-grid img,
+  .ill-card img,
+  .cursor {
+    transition-duration: 1ms !important;
+  }
+}

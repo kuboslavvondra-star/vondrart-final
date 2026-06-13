@@ -1,27 +1,27 @@
 const illustrations = [
   {
     caption: "Punkt — omalovánka",
-    image: "/images/illustration-punkt.jpg"
+    image: "/images/illustration-punkt.webp"
   },
   {
     caption: "Bonghemia — ilustrace",
-    image: "/images/illustration-bonghemia.jpg"
+    image: "/images/illustration-bonghemia.webp"
   },
   {
     caption: "Vltavská",
-    image: "/images/illustration-vltavska.jpg"
+    image: "/images/illustration-vltavska.webp"
   },
   {
     caption: "Swap & Sip",
-    image: "/images/illustration-swap-sip.jpg"
+    image: "/images/illustration-swap-sip.webp"
   },
   {
     caption: "Barvy & Beaty",
-    image: "/images/illustration-barvy-beaty.jpg"
+    image: "/images/illustration-barvy-beaty.webp"
   },
   {
     caption: "Five Elephant Takeover",
-    image: "/images/illustration-five-elephant.jpg"
+    image: "/images/illustration-five-elephant.webp"
   }
 ];
 
